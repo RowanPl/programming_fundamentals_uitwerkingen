@@ -11,4 +11,21 @@
 # BONUS: Gebruik `import random` en `random.randomInt(1, 10)` om je geheime getal mee te maken
 # en deze zo ook voor jezelf geheim te houden.
 
+import random
+
+random_number = random.randint(1, 10)
+guess = int(input("Raad het getal tussen 1 en 10: "))
+attempts = 0
+
+while guess != random_number:
+    if guess < random_number:
+        print("Het getal is te laag. Probeer het opnieuw.")
+    else:
+        print("Het getal is te hoog. Probeer het opnieuw.")
+    guess = int(input("Raad het getal tussen 1 en 10: "))
+    attempts += 1
+
+print(f"Gefeliciteerd! Je hebt het getal geraden in {attempts} pogingen.")
+
+
 
